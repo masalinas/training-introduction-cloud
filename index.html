@@ -7,7 +7,7 @@
 
     <link rel="stylesheet" href="dist/reset.css">
     <link rel="stylesheet" href="dist/reveal.css">
-    <link rel="stylesheet" href="dist/theme/black.css" id="theme">
+    <link rel="stylesheet" href="dist/theme/league.css" id="theme">
     <link rel="stylesheet" href="styles/training.css">
 
     <!-- Theme used for syntax highlighted code -->
@@ -17,23 +17,23 @@
     <div class="reveal">
       <div class="slides">
         <section>
-          <section data-external="slides/chapter01/chapter01.html"></section>
-          <section data-external="slides/chapter01/chapter01_01.html" style="text-align: left;"></section>
-          <section data-external="slides/chapter01/chapter01_02.html" style="text-align: left;"></section>
-          <section data-external="slides/chapter01/chapter01_03_01.html" style="text-align: left;"></section>
-          <section data-external="slides/chapter01/chapter01_03_02.html" style="text-align: left;"></section>
-          <section data-external="slides/chapter01/chapter01_04_01.html" style="text-align: left;"></section>
-          <section data-external="slides/chapter01/chapter01_04_02.html" style="text-align: left;"></section>
-          <section data-external="slides/chapter01/chapter01_05.html" style="text-align: left;"></section>
+          <section data-menu-title="Chapter 1. Virtualization" data-external="slides/chapter01/000_virtualization.html"></section>
+          <section data-menu-title="Introduction to Cloud Computing and Technologies" data-external="slides/chapter01/011_introduction_and_learning_objectives_introduction_to_cloud_computing_and_technologies.html" style="text-align: left;"></section>
+          <section data-menu-title="Key Features of Cloud Computing" data-external="slides/chapter01/012_introduction_and_learning_objectives_key_features_of_cloud_computing.html" style="text-align: left;"></section>
+          <section data-menu-title="Cloud Deployment Models" data-external="slides/chapter01/013_introduction_and_learning_objectives_cloud_deployment_models_01.html" style="text-align: left;"></section>
+          <section data-menu-title="Cloud Deployment Models (Cont)" data-external="slides/chapter01/013_introduction_and_learning_objectives_cloud_deployment_models_02.html" style="text-align: left;"></section>
+          <section data-menu-title="Virtualization" data-external="slides/chapter01/014_introduction_and_learning_objectives_virtualization_01.html" style="text-align: left;"></section>
+          <section data-menu-title="Virtualization (Cont)" data-external="slides/chapter01/014_introduction_and_learning_objectives_virtualization_02.html" style="text-align: left;"></section>
+          <section data-menu-title="Learning Objectives" data-external="slides/chapter01/015_introduction_and_learning_objectives_learning_objectives.html" style="text-align: left;"></section>
         </section>
 
         <section>
-          <section data-external="slides/chapter02/chapter02.html"></section>
-          <section data-external="slides/chapter02/chapter02_01.html" style="text-align: left;"></section>
-          <section data-external="slides/chapter02/chapter02_02.html" style="text-align: left;"></section>
-          <section data-external="slides/chapter02/chapter02_03.html" style="text-align: left;"></section>
-          <section data-external="slides/chapter02/chapter02_04_01.html" style="text-align: left;"></section>
-          <section data-external="slides/chapter02/chapter02_04_02.html" style="text-align: left;"></section>
+          <section data-menu-title="Amazon Elastic Compute Cloud" data-external="slides/chapter02/000_infrastructure_as_a_service_IaaS.html"></section>
+          <section data-menu-title="Introduction" data-external="slides/chapter02/010_Introduction and_learning_objectives_introduction.html" style="text-align: left;"></section>
+          <section data-menu-title="Learning Objectives" data-external="slides/chapter02/011_Introduction and_learning_objectives_learning_objectives.html" style="text-align: left;"></section>
+          <section data-menu-title="Introduction to Amazon EC2" data-external="slides/chapter02/021_amazon_elastic_compute_cloud_introduction_to_amazon_EC2.html" style="text-align: left;"></section>
+          <section data-menu-title="Features and Tools" data-external="slides/chapter02/022_amazon_elastic_compute_cloud_features_and_tools_01.html" style="text-align: left;"></section>
+          <section data-menu-title="Features and Tools (Cont)" data-external="slides/chapter02/022_amazon_elastic_compute_cloud_features_and_tools_02.html" style="text-align: left;"></section>
         </section>
         
         <section>
@@ -175,6 +175,7 @@
     <script src="plugin/markdown/markdown.js"></script>
     <script src="plugin/highlight/highlight.js"></script>
     <script src="plugin/external/external.js"></script>
+    <script src="plugin/zoom/zoom.js"></script>
     <script src="node_modules/reveal.js-menu/menu.js"></script>
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="js/training.js"></script>
@@ -183,8 +184,7 @@
       Reveal.initialize({
         hash: true,
         center: false,
-        src: 'plugin/external/external.js', condition: function() { return !!document.querySelector( '[data-external]' );},
-				// Learn about plugins: https://revealjs.com/plugins/
+        src: 'plugin/external/external.js', condition: function() { return !!document.querySelector('[data-external]');},
 				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMenu ]
       });
     </script>
