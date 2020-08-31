@@ -1,0 +1,38 @@
+<h5>Virtualization (Cont)</h5>
+<div>    
+    <p style="padding-left: 30px;"><strong>Type-2 hypervisor</strong> (hosted) runs on top of the host's OS. Typically, they are for end-users, but they may be found in enterprise settings as well. Examples of type-2 hypervisors:</p>
+    <ul>
+    <ul>
+    <ul>
+    <ul>
+    <ul>
+    <ul>
+    <li>VirtualBox</li>
+    <li>VMware Player</li>
+    <li>VMware Workstation&nbsp;</li>
+    <li>Parallels Desktop for Mac.</li>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <p style="font-size: 16px; line-height: 25.6px; padding-left: 30px;">And then there are the exceptions - hypervisors matching both categories, which can be listed redundantly under hypervisors of both type-1 and type-2. They are Linux kernel modules that act as both type-1 and type-2 hypervisors at the same time. Examples are:</p>
+    <ul>
+    <ul>
+    <ul>
+    <ul>
+    <ul>
+    <ul>
+    <li>KVM</li>
+    <li>bhyve.</li>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <p style="font-size: 16px; line-height: 25.6px;">Hypervisors enable the virtualization of computer hardware such as CPU, disk, network, RAM, etc., and allow the installation of guest VMs on top of them. We can create multiple guest VMs&nbsp;with different Operating Systems on a single hypervisor. For example, we can use a native Linux&nbsp;machine as a host, running on bare-metal, and after setting up a type-2 hypervisor we can create multiple guest machines with different OSes, commonly Linux and Windows.&nbsp;</p>
+    <p style="font-size: 16px; line-height: 25.6px;">Hardware virtualization is supported by most modern CPUs, and it is the feature that allows hypervisors to virtualize the physical hardware of a host system, thus sharing the host system's processing resources with multiple guest systems in a safe and efficient manner. In addition, most modern CPUs also support&nbsp;<a href="https://en.wikipedia.org/wiki/Virtualization#Nested_virtualization" target="_blank">nested virtualization</a>, which allows us to have VMs inside a VM.</p>
+    <p style="font-size: 16px; line-height: 25.6px;">Next, let's explore a few methods of creating VMs on top of different hypervisors.</p>
+</div>
