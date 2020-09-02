@@ -1,21 +1,29 @@
 <h3>Amazon Elastic Compute Cloud</h3>
 <h5>Features and Tools</h5>
     
-<div>
-    <p>When provisioning Amazon EC2 instances, users are able to manage different instance aspects, such as hardware profile, operating system image with software package, additional storage, the network attached to the instance, and firewall rules.&nbsp;</p>
-    <p><a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIs.html" target="_blank">Amazon Machine Images</a>&nbsp;(<strong>AMI</strong>) are preconfigured images with the information needed to launch EC2 instances. They include an Operating System and a collection of software packages. AMIs are stored in an AWS repository and are used to quickly launch instances. There are default images created and maintained by AWS, the user community, or custom images we can create ourselves.</p>
-    <p><a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html" target="_blank">Instance Types</a>&nbsp;determine the virtualized hardware profile of the instance to be launched. Each instance type is preconfigured with different compute, memory, and storage capabilities. They are categorized in instance families such as:</p>
+<div>    
+    <p>When you launch an instance, select an instance type based on the requirements of the application or software that you plan to run on your instance. The following are just a few examples of general purpose instance types, together with their high-level hardware profile information:</p>
     <ul>
     <ul>
     <ul>
-    <li>General purpose instances</li>
-    <li>Optimized instances for:</li>
+    <li><strong><span style="font-family: 'courier new', courier;">t2.micro</span></strong>:&nbsp;1 vCPUs, 2.5 GHz, Intel Xeon Family, 1 GiB memory, EBS only</li>
+    <li><strong><span style="font-family: 'courier new', courier;">t3a.large</span></strong>:&nbsp;2 vCPUs, 2.2 GHz, AMD EPYC 7571, 8 GiB memory, EBS only</li>
+    <li><strong><span style="font-family: 'courier new', courier;">m5a.16xlarge</span></strong>: 64 vCPUs, 2.5 GHz, AMD EPYC 7571, 256 GiB memory, EBS only.</li>
+    </ul>
+    </ul>
+    </ul>
+    <p>Additional configurable aspects of EC2 instances, related services, and tools:&nbsp;&nbsp;</p>
     <ul>
     <ul>
     <ul>
-    <li>Compute (for CPU intensive applications)</li>
-    <li>GPU</li>
-    <li>Memory (RAM)</li>
-    <li>Machine Learning (ML)</li>
-    <li>Storage (SSD).</li>    
+    <li><a href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html" target="_blank">Security Groups</a>&nbsp;for network access rules</li>
+    <li><a href="https://aws.amazon.com/ebs/" target="_blank">Amazon Elastic Block Store</a>&nbsp;(<strong>EBS</strong>) for persistent storage attachment</li>
+    <li>Dedicated hosts to provision instances on a physical machine reserved for our use</li>
+    <li>Elastic IP to remap a Static IP address automatically</li>
+    <li><a href="https://aws.amazon.com/vpc/" target="_blank">Virtual Private Cloud</a>&nbsp;(<strong>VPC</strong>) for network isolation</li>
+    <li><a href="https://aws.amazon.com/cloudwatch/" target="_blank">CloudWatch</a> for monitoring resources and applications</li>
+    <li><a href="https://aws.amazon.com/autoscaling/" target="_blank">Auto Scaling</a>&nbsp;to&nbsp;dynamically resize resources.</li>
+    </ul>
+    </ul>
+    </ul>
 </div>
