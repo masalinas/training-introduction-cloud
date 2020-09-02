@@ -1,2 +1,6 @@
 <h3>Containers</h3>
 <h5>Images and Containers</h5>
+
+<p>In the container world, this box containing our application source code and all its dependencies and libraries is referred to as an&nbsp;<strong>image</strong>. A running instance of this box is referred to as a&nbsp;<strong>container</strong>. We can run multiple containers from the same image.</p>
+<p>An image contains the application, its dependencies, and the user-space libraries. User-space libraries like <strong><span style="font-family: 'courier new', courier;">glibc</span></strong> enable switching from the user-space to the kernel-space. An image does not contain any kernel-space components.</p>
+<p>When a container is created from an image, it runs as a process on the host's kernel. It is the host kernel's job to isolate the container process and to provide resources to each container.</p>

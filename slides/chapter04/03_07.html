@@ -1,2 +1,7 @@
 <h3>Containers</h3>
 <h5>Containers vs VMs</h5>
+
+<p>A virtual machine runs on top of a <a href="https://en.wikipedia.org/wiki/Hypervisor" target="_blank">hypervisor</a>, which virtualizes a host system's hardware by emulating CPU, memory and networking hardware resources so that a guest OS can be installed on top of them. Different kinds of guest OSes can run on top of one hypervisor. Between an application running inside a guest OS and in the outside world, there are multiple layers:&nbsp;the guest OS, the hypervisor, and at times the host OS.&nbsp;</p>
+<p style="text-align: center;"><img src="/assets/Docker_Containers_vs._VMs.png" alt="Docker Containers versus Virtual Machines" width="500" height="250"></p>
+<p style="text-align: center;"><strong>Docker Container vs VMs</strong><br>(by Docker, Inc.)</p>
+<p>In contrast to VMs, containers run directly as processes on the host OS. There is no indirection as we see in VMs, which helps containers to achieve near-native performance. Also, as the containers have a very light footprint, it becomes easier to pack a higher&nbsp;number of containers than VMs on the same physical machine. However, as containers run on the host OS, we need to make sure containers are compatible with the host OS.</p>

@@ -1,0 +1,12 @@
+<h3>Containers</h3>
+<h5>The Container Technology: Building Blocks</h5>
+
+<p><strong>cgroups</strong><span> <br></span><em>Control groups</em><span> are used to organize processes hierarchically and distribute system resources along the hierarchy in a controlled and configurable manner. The following cgroups are available for Linux:</span></p>
+<li>blkio</li>
+<li>cpu</li>
+<li>cpuacct</li>
+<li>cpuset</li>
+<li>devices</li>
+<li>freezer</li>
+<li>memory.</li>
+<p><strong>Union filesystem <br></strong>The Union filesystem allows files and directories of separate filesystems, known as layers, to be transparently overlaid on top of each other, to create a new virtual filesystem. An image used in Docker is made of multiple layers and, while starting a new container, we merge all those layers to create a read-only filesystem. On top of a read-only filesystem, a container gets a read-write layer, which is an ephemeral layer and it is local to the container.</p>

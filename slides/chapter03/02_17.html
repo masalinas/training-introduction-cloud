@@ -1,2 +1,12 @@
 <h3>The Heroku Platform</h3>
 <h5>Heroku Core Concepts</h5>
+
+<p>A strict Heroku-centric development and deployment workflow needs to be followed once the decision has been made to use Heroku. However, the workflow is quite developer-friendly. Below are several core concepts of the workflow:</p>
+<li>Applications should contain the source code, its dependency information and the list of named commands to be executed to deploy it, in a file called <strong><span style="font-family: 'courier new', courier;"><a href="https://devcenter.heroku.com/articles/procfile" target="_blank">Procfile</a></span>.</strong></li>
+<li>For each supported language, it has a pre-built image which contains a compiler for that language. This pre-built image is referred to as a&nbsp;<a href="https://devcenter.heroku.com/articles/buildpacks" target="_blank">buildpack</a>. <a href="https://devcenter.heroku.com/articles/using-multiple-buildpacks-for-an-app" target="_blank">Multiple buildpacks</a>&nbsp;can be used together. We can also create a custom buildpack.</li>
+<li>While deploying, we need to send the application's content to Heroku,&nbsp;either via&nbsp;Git, GitHub, or via an API. Once the application is received&nbsp;by&nbsp;Heroku, a buildpack is selected based on the language of preference.</li>
+<li>To create the runtime which is ready for execution, we compile the application after fetching its dependency and configuration variables on the selected buildpack. This runtime is often referred to as a <a href="https://devcenter.heroku.com/articles/slug-compiler" target="_blank">slug</a>.</li>
+<li>We can also use&nbsp;third-party <a href="https://elements.heroku.com/addons" target="_blank">add-ons</a> to enable access to value-added services like logging, caching, monitoring, etc.</li>
+<li>A combination of slug, configuration variables, and add-ons is referred to as a release, on which we can perform upgrade or rollback.</li>
+<li>Depending on the process-type declaration in the&nbsp;<strong><span style="font-family: 'courier new', courier;">Procfile</span></strong>, a virtualized UNIX container is created to serve the process in an isolated environment, which can be scaled up or down, based on the requirements. Each virtualized UNIX container is referred to as a <a href="https://devcenter.heroku.com/articles/dynos" target="_blank">dyno</a>. Each dyno gets its own ephemeral storage.</li>
+<li>Dyno Manager manages dynos across all applications running on Heroku.</li>

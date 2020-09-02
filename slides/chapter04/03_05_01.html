@@ -1,0 +1,11 @@
+<h3>Containers</h3>
+<h5>The Container Technology: Building Blocks</h5>
+
+<p>We will now take a look at some of the building blocks of the container technology, provided by the Linux&nbsp;kernel.</p>
+<p><strong>Namespaces</strong>&nbsp;<br>A namespace wraps a particular global system resource like network, process IDs in an abstraction, that makes it appear to the processes within the namespace that they have their own isolated instance of the global resource. The following global resources are namespaced:</p>
+<li>pid<span> - provides each namespace to have the same PIDs. Each container has its own PID 1.</span></li>
+<li>net - allows each namespace to have its network stack. Each container has its own IP address.</li>
+<li>mnt - allows each namespace to have its own view of the filesystem hierarchy.</li>
+<li>ipc - allows each namespace to have its own interprocess communication.</li>
+<li>uts - allows each namespace to have its own hostname and domain name.</li>
+<li>user - allows each namespace to have its own user and group ID number spaces. A <em>root</em> user inside a container is not the <em>root</em> user of the host on which the container is running.</li>
