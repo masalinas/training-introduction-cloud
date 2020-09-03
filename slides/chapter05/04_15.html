@@ -1,2 +1,8 @@
 <h3>RancherOS</h3>
 <h5>Components of RancherOS</h5>
+
+<p>RancherOS runs two separate Docker daemon instances. Just after booting, it starts the first Docker daemon instance, the <strong>System Docker</strong>, with <span style="font-family: 'courier new', courier;"><strong>PID 1</strong></span> to run system containers such as&nbsp;<span style="font-family: 'courier new', courier;"><strong>console</strong></span>,&nbsp;<span style="font-family: 'courier new', courier;"><strong>dhcp</strong><span style="font-family: 'Open Sans', Verdana, Arial, Helvetica, sans-serif;">, <span style="font-family: 'courier new', courier;"><strong>ntpd</strong></span>, <span style="font-family: 'courier new', courier;"><strong>syslog</strong></span>, and&nbsp;</span><strong>udev</strong></span>.</p>
+<p>In order to run user-level containers, the&nbsp;System Docker daemon creates a service to start the second Docker daemon instance, called <strong>Docker</strong>, that isolates the system containers from regular user commands.</p>
+<p style="text-align: center;"><img src="/assets/Figure_6.4-_RancherOS_Architecture.png" alt="RancherOS Architecture" type="saveimage" width="500" height="350" class="responsive"></p>
+<p style="text-align: center;"><strong>RancherOS</strong> <strong>Architecture</strong> <br>(by Rancher, retrieved from <a href="https://rancher.com/docs/os/v1.x/en/" target="_blank">rancher.com</a>)</p>
+<p>RancherOS also includes a CLI utility called <strong><span style="font-family: 'courier new', courier;">ros</span></strong>, which can be used to control and configure the system.</p>

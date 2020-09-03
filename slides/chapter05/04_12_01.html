@@ -1,0 +1,7 @@
+<h3>Fedora CoreOS</h3>
+<h5>Components of Fedora CoreOS</h5>
+
+<p>Fedora CoreOS (FCOS) combines features of both CoreOS Container Linux and Fedora Atomic Host (FAH). In order to&nbsp;provide a robust container host to run containerized workloads securely and at scale, it integrates the following:</p>
+<li><strong>Ignition</strong> from CoreOS Container Linux <br>A provisioning utility designed specifically for Core OS Container Linux, which allows users to manipulate disks during early boot, such as partitioning disks, formatting partitions, writing files, and configuring users. Ignition runs early in the boot process (in the initramfs) and&nbsp;runs its&nbsp;configuration before the userspace boot, which provides advanced features to administrators.</li>
+<li><strong>rpm-ostree</strong> from FAH <br>One cannot manage individual packages on Atomic Host, as there is no&nbsp;<strong><span style="font-family: 'courier new', courier;">rpm</span></strong>&nbsp;or other related commands. To get any required service, you would have to start a respective container. Atomic Host has two bootable, immutable, and versioned filesystems; one is used to boot the system and the other is used to fetch updates from upstream.&nbsp;<span style="font-family: 'courier new', courier;"><strong>rpm-ostree</strong></span>&nbsp;is the tool to manage these two versioned filesystems.</li>
+<li><strong>SELinux hardening</strong> from FAH&nbsp;<br>Containers secured with SELinux provide close-to-VM isolation, security, increased flexibility, and efficiency.</li>

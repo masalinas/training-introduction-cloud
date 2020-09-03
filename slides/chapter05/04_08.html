@@ -1,2 +1,13 @@
 <h3>Atomic Host</h3>
 <h5>Components of Atomic Host</h5>
+
+<p>Atomic Host has a very minimal base OS, but it includes components like <span><strong>systemd </strong></span>and&nbsp;<span><strong>journald</strong></span> to help its users and administrators. It is built on top of the following:</p>    
+<li><span style="font-family: 'courier new', courier;"><strong>rpm-ostree</strong></span>&nbsp;<br>One cannot manage individual packages on Atomic Host, as there is no <strong><span style="font-family: 'courier new', courier;">rpm</span></strong> or other related commands. To get any required service, you would have to start a respective container. Atomic Host has two bootable, immutable, and versioned filesystems; one is used to boot the system and the other is used to fetch updates from upstream. <span style="font-family: 'courier new', courier;"><strong>rpm-ostree</strong></span> is the tool to manage these two versioned filesystems.</li>
+<li><strong><span style="font-family: 'courier new', courier;">systemd</span></strong>&nbsp;<br>It is used to manage system services for Atomic Host.</li>
+<li><strong>Docker</strong>&nbsp;<br>Atomic Host currently supports Docker as a container runtime.</li>
+<li><strong>Kubernetes</strong>&nbsp;<br>With Kubernetes, we can create a cluster of Atomic Hosts to run applications at scale.</li>
+</ul>
+</ul>
+</ul>
+<p>Atomic Host also comes with a command called <strong><span style="font-family: 'courier new', courier;">atomic</span>.</strong> This command provides a high-level, coherent entry point to the system, and fills in the gaps that are not filled by Linux container implementations, such as upgrading the system to the new <span style="font-family: 'courier new', courier;"><strong>rpm-ostree</strong></span>, running containers with pre-defined <span style="font-family: 'courier new', courier;"><strong>docker run</strong></span> options using labels, verifying an image, etc.</p>
+<p>Atomic Host&nbsp;can be managed using tools such as <a href="http://www.projectatomic.io/docs/cockpit/" target="_blank">Cockpit</a>.&nbsp;<span style="color: #24292e; font-family: 'Open Sans', Verdana, Arial, Helvetica, sans-serif;">Cockpit is a server manager that makes it easy to administer your GNU/Linux servers via a web browser.</span></p>
