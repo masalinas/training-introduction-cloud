@@ -1,0 +1,12 @@
+<h3>Kubernetes</h3>
+<h5>The Kubernetes Architecture - Key Components (Part II)</h5>
+
+<div class="edx-notes-wrapper-content"><p>The key API resources of the&nbsp;Kubernetes&nbsp;architecture:</p>
+<li><strong>Pod</strong>&nbsp;<br>The pod is a co-located group of containers with shared volumes, however, it often manages a single container. It is the smallest deployment unit in Kubernetes. A pod can be created independently, but it is recommended the use of controllers such as the&nbsp;ReplicaSet or Deployment, even if only a single pod is being deployed.</li>
+<li><strong>ReplicaSet<br></strong>The ReplicaSet is a mid-level controller that manages the lifecycle of pods.&nbsp;It ensures that the desired number of pods is running at all times.&nbsp;</li>
+<li><strong>Deployment<br></strong>The Deployment is a top-level controller that allows us to&nbsp;provide declarative updates for pods and ReplicaSets. We can define Deployments to create new resources, or replace existing ones&nbsp;with new ones. Some typical use cases are presented below:</li>
+<li>Create a Deployment to bring up a ReplicaSet and pods.</li>
+<li>Check the status of a Deployment to see if it succeeds or not.</li>
+<li>Later, update that Deployment to recreate the pods (to use a new image).</li>
+<li>Rollback to an earlier Deployment revision if the current Deployment isn’t stable.</li>
+<li>Pause and resume a Deployment. Below we provide a <a href="http://kubernetes.io/docs/user-guide/deployments/" target="_blank">sample deployment</a>:</li>

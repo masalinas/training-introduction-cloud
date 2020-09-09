@@ -1,0 +1,6 @@
+<h3>Docker Swarm</h3>
+<h5>Introduction to Docker Swarm</h5>
+
+<p>The above&nbsp;illustration depicts two major components of a swarm:</p>
+<li><strong>Swarm Manager Nodes<br></strong>Accept commands on behalf of the cluster and make scheduling decisions. They also maintain the cluster state and store it using the&nbsp;<em>Internal Distributed State Store</em><span>, which uses the&nbsp;<a href="https://raft.github.io" target="_blank">Raft</a> consensus algorithm.</span><span>&nbsp;One or more nodes can be configured as managers for fault-tolerance. When multiple managers are present they are configured in&nbsp;</span><em>active</em><span>/</span><em>passive</em><span> modes.</span></li>
+<li><span><strong>Swarm Worker Nodes</strong><br>Run the Docker Engine and the sole purpose of the worker nodes is to run the container workload dispatched by the manager node(s).<br></span></li>

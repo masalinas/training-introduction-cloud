@@ -1,0 +1,8 @@
+<h3>Docker Swarm</h3>
+<h5>Docker Machine</h5>
+
+<p>Docker Machine has drivers for&nbsp;Amazon EC2, Google Cloud, Digital Ocean, Vagrant, etc., to set up Docker engines.&nbsp;You can also add already running instances of the Docker Engine to the Docker Machine:</p>
+<li><span>Setting up the&nbsp;Docker Engine using the VirtualBox driver:<br></span><span style="color: #0000ff;"><strong><span style="font-family: 'courier new', courier;">$ docker-machine create -d virtualbox dev1</span></strong></span></li>
+<li>Setting up the Docker Engine using DigitalOcean:<br><span style="color: #0000ff;"><strong><span style="font-family: 'courier new', courier;">$</span><span style="font-family: 'courier new', courier;"> docker-machine create --driver digitalocean --digitalocean-acc</span></strong><strong><span style="font-family: 'courier new', courier;">ess-token=&lt;TOKEN&gt; dev2</span></strong></span></li>
+<p>We can also use&nbsp;Docker Machine&nbsp;to&nbsp;configure a Swarm cluster.</p>
+<p>In addition to Docker Machine, there are two newer products aimed to ease the Docker installation process on Windows and Mac.&nbsp;<strong><a href="https://docs.docker.com/docker-for-windows/" target="_blank">Docker Desktop for Windows</a></strong> and&nbsp;<strong><a href="https://docs.docker.com/docker-for-mac/" target="_blank">Docker Desktop for Mac</a></strong> are designed to install Docker Machine and Docker Compose on newer desktops and laptops.&nbsp;</p>

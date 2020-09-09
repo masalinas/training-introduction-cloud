@@ -1,0 +1,38 @@
+<h3>Kubernetes</h3>
+<h5>The Kubernetes Architecture - Key Components (Part II)</h5>
+
+<pre style="text-rendering: optimizeLegibility; font-size: 16px; padding: 0px 0px 0px 60px; border: 0px; outline: 0px; font-stretch: inherit; line-height: 1.4em; vertical-align: baseline;"><span style="font-family: 'courier new', courier;"><code style="text-rendering: optimizeLegibility; font-size: inherit; margin: 0px; border: 0px; outline: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: 1.4em; vertical-align: baseline; border-radius: 3px;">
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: nginx-deployment<br>  labels:<br>    app: nginx
+spec:
+    replicas: 3
+    template:
+    metadata:
+        labels:
+        app: nginx
+    spec:
+        containers:
+        - name: nginx
+        image: nginx:1.17.9
+        ports:
+        - containerPort: 80</span></strong>
+</pre>
+
+<li><strong>Service</strong>&nbsp;<br>The service groups sets of pods together and provides a way to refer to them from a single static IP address and the corresponding DNS name. It can reference a single pod, a group of individual pods, or pods managed by ReplicaSets or Deployments. Below, we provide&nbsp;a <a href="https://kubernetes.io/docs/concepts/services-networking/service/" target="_blank">sample service</a>:</li>
+<pre style="text-rendering: optimizeLegibility; font-size: 16px; padding: 0px 0px 0px 60px; border: 0px; outline: 0px; font-stretch: inherit; line-height: 1.4em; vertical-align: baseline;"><span style="font-family: 'courier new', courier;"><code style="text-rendering: optimizeLegibility; font-size: inherit; margin: 0px; border: 0px; outline: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: 1.4em; vertical-align: baseline; border-radius: 3px;">
+apiVersion: v1
+kind: Service
+metadata:
+    name: frontend
+    labels:
+    app: dockchat
+    tier: frontend
+spec:
+    type: LoadBalancer
+    ports:
+    - port: 9500<br>    targetPort: 5000
+    selector:
+    app: dockchat
+    tier: frontend</b>

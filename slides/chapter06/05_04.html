@@ -1,2 +1,14 @@
 <h3>Docker Swarm</h3>
 <h5>Features</h5>
+
+<p>Key characteristics of Docker Swarm:</p>
+<li>It is compatible with Docker tools and API so that the existing workflow does not change much.</li>
+<li>It provides native support to Docker networking and volumes.</li>
+<li>It can scale up to large numbers of nodes.</li>
+<li>It supports failover and High Availability for the cluster manager for fail-tolerance.</li>
+<li>It uses a declarative approach to define the desired state of the various services of the application stack.</li>
+<li>For each service,&nbsp;you can declare the number of tasks you want to run. When you scale up or down, the Swarm&nbsp;manager automatically adapts by adding or removing tasks to maintain the desired state.</li>
+<li>The&nbsp;Docker Swarm manager&nbsp;node constantly monitors the cluster state and reconciles any differences between the actual state and your expressed desired state.</li>
+<li>The communication between the nodes of&nbsp;Docker Swarm&nbsp;is enforced with&nbsp;<a href="https://en.wikipedia.org/wiki/Transport_Layer_Security" target="_blank">Transport Layer Security</a>&nbsp;(TLS), which makes it secure by default.</li>
+<li>It supports rolling updates to control a delay between service deployment to different sets of nodes. If a task rollout is unsuccessful, you can roll back a task to a previous version of the service.</li>
+<p>Since&nbsp;we are illustrating the characteristics for Docker Swarm, we will also briefly discuss&nbsp;Docker Machine and Docker Compose&nbsp;in&nbsp;the next few pages.</p>
